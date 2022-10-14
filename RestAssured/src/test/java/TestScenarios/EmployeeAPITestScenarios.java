@@ -58,12 +58,13 @@ public class EmployeeAPITestScenarios {
         empReqPayload.setYearsOfExperience(5);
         empReqPayload.setLastName("Doe");
 
-        LoginRequestBody reqPayload = new LoginRequestBody();
-        reqPayload.setEmail("muhammed.saleeq@gds.ey.com");
-        reqPayload.setPassword("12345678");
+        //Not required
+//         LoginRequestBody reqPayload = new LoginRequestBody();
+//         reqPayload.setEmail("muhammed.saleeq@gds.ey.com");
+//         reqPayload.setPassword("12345678");
 
-        Response Loginresponse = LoginAPI.ReqRestAPI(reqPayload);
-        LoginPositiveResponse LoginPositiveresponse = Loginresponse.as(LoginPositiveResponse.class);
+//         Response Loginresponse = LoginAPI.ReqRestAPI(reqPayload);
+//         LoginPositiveResponse LoginPositiveresponse = Loginresponse.as(LoginPositiveResponse.class);
 
 
         Response Empresponse = EmployeeAPI.ReqRestAPI(empReqPayload, "465777");

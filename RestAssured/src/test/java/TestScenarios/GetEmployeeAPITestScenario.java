@@ -66,10 +66,11 @@ public class GetEmployeeAPITestScenario {
 
         String Token = LoginPositiveresponse.getToken();
 
-        Response Empresponse = EmployeeAPI.ReqRestAPI(empReqPayload, Token);
-        EmployeeSuccessResponse EmpPositiveresponse = Empresponse.as(EmployeeSuccessResponse.class);
+        //Not required
+//         Response Empresponse = EmployeeAPI.ReqRestAPI(empReqPayload, Token);
+//         EmployeeSuccessResponse EmpPositiveresponse = Empresponse.as(EmployeeSuccessResponse.class);
 
-        String EmpId = EmpPositiveresponse.getEmployeeId();
+//         String EmpId = EmpPositiveresponse.getEmployeeId();
 
         Response EmpGetresponse = EmployeeGetApi.ReqRestAPI(Token, "34355");
         Assert.assertEquals(EmpGetresponse.getStatusCode(), 404);
